@@ -1,0 +1,15 @@
+{
+  "name": "mocker-sample",
+  "version": "0.0.1",
+  "description": "Sample use for mocker",
+  "repository": "",
+  "license": "MIT",
+  "scripts": {
+    "start": "mocker-ui",
+    "mock-server": "mocker-mock-server",
+    "learning-mode": "mocker-learning-mode"
+  },
+  "dependencies": {
+    "@kroonprins/mocker": "0.0.5"
+  }
+}

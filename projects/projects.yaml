@@ -1,0 +1,4 @@
+projects:
+  - name: 'Tesje'
+    rules:
+      - ../rules/*.yaml

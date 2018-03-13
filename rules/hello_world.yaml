@@ -1,0 +1,32 @@
+---
+name: Hello World
+randomLatency:
+  min: 500
+  max: 2000
+request:
+  path: /hello/:id
+  method: GET
+response:
+  templatingEngine: nunjucks
+  contentType: application/json
+  statusCode: "{% if req.params.id > 5 %}400{% else %}200{% endif %}"
+  headers:
+    - name: X-positivo
+      value: jawohl
+    - name: X-zeker
+      value: klahr
+    - name: X-yup
+      value: "{{req.query.q}}"
+  cookies:
+    - name: koekske
+      value: jummie
+      properties:
+        secure: true
+    - name: only
+      value: http
+      properties:
+        httpOnly: true
+  body: |
+    {
+      "respo": "Yuuuuppp! {{req.query.q | appendText('s')}} / {{double(req.params.id)}}"
+    }
