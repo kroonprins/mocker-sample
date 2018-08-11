@@ -23,7 +23,7 @@ Add shortcuts in package.json:
     "learning-mode": "mocker-learning-mode"
   }
 ```
-note: on Windows the shortcuts need to be defined as follows:
+note: on Windows the shortcuts need to be defined as follows instead:
 ```json
   "scripts": {
     "start": "node --experimental-modules .\node_modules\@kroonprins\mocker\mocker-ui.mjs",
@@ -55,13 +55,13 @@ Add a .env file in the root of the project and add following variables:
 
 To run the UI:
 ```shell
-npm run mocker-ui
+npm start
 ```
 From the UI projects can be defined, rules added to the projects, mock servers and learning mode can be started, the captured requests from learning mode can be handled.
 
 To start the mock server for a project from the command line instead of the UI: 
 ```shell
-npm start
+npm run mock-server
 ```
 In this case the variable MOCKER_PROJECT should be defined in the .env file specifying the name of the project for which the mock server should be started.
 
