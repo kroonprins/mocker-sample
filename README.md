@@ -47,9 +47,11 @@ Add a .env file in the root of the project and add following variables:
 * MOCKER_UI_SERVER_STATICS_LOCATION (optional): override the location where the UI server statics are located.
 * MOCKER_MOCK_SERVER_PORT (optional): override the default port (3000) used by the mock server when run from the command line.
 * MOCKER_MOCK_SERVER_BIND_ADDRESS (optional): bind the mock server to a given address instead of localhost when run from the command line.
+* MOCKER_MOCK_SERVER_WATCH_FOR_FILE_CHANGES (optional): if set to true, a running mock server will watch the filesystem for changes to project configuration, and automatically restart itself when this happen to load the latest configuration. 
 * MOCKER_LEARNING_MODE_REVERSE_PROXY_SERVER_PORT (optional): override the default port (3002) for the learning mode reverse proxy server when run from the command line.
 * MOCKER_LEARNING_MODE_REVERSE_PROXY_SERVER_BIND_ADDRESS (optional): bind the learning mode reverse proxy server to a given address instead of localhost when run from the command line.
 * MOCKER_LEARNING_MODE_REVERSE_PROXY_SERVER_TARGET_HOST (optional): when the learning mode reverse proxy server is started from the command line then this variable should be set to indicate the downstream server to which the reverse proxy should proxy the requests.
+* MOCKER_LOG_LEVEL: set the log level (one of 'error', 'warn', 'info', 'debug', or 'trace')
 
 To run the UI:
 ```shell
